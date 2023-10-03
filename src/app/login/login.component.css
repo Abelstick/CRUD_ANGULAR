@@ -1,0 +1,100 @@
+
+.contenedor {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.formulario {
+  color: white;
+  width: 100%; 
+  max-width: 400px;
+  background-color: #21212169;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center; 
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+.buttonAcceder {
+    all: unset;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    padding: 0.05em 2em 0.4em;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: mediumspringgreen;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+    text-align: center; 
+  }
+  
+
+.buttonAcceder p {
+  z-index: 1;
+}
+
+.buttonAcceder:hover {
+  color: #212121;
+}
+
+.buttonAcceder:active {
+  border-color: teal;
+}
+
+.buttonAcceder::after,
+.buttonAcceder::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.buttonAcceder::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.buttonAcceder::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.buttonAcceder:hover:before {
+  transform: translateX(-1em);
+}
+
+.buttonAcceder:hover:after {
+  transform: translateX(1em);
+}
+
+.buttonAcceder:active:before,
+.buttonAcceder:active:after {
+  background: teal;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  z-index: 1000;
+}
+
+
+
+
